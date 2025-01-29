@@ -86,6 +86,12 @@ docker exec -it QM1 bash
 
 ### **Detener y eliminar el contenedor**
 
+#### Para iniciar el contenedor:
+```bash
+docker start QM1
+```
+
+
 #### Para detener el contenedor:
 ```bash
 docker stop QM1
