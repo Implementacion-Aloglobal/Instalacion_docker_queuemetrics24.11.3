@@ -1,0 +1,22 @@
+```
+            _                    ____   __  __  ___   _  _         _               _               
+     /\    | |                  / __ \ |  \/  ||__ \ | || |       | |             | |              
+    /  \   | |  ___    ______  | |  | || \  / |   ) || || |_    __| |  ___    ___ | | __ ___  _ __ 
+   / /\ \  | | / _ \  |______| | |  | || |\/| |  / / |__   _|  / _` | / _ \  / __|| |/ // _ \| '__|
+  / ____ \ | || (_) |          | |__| || |  | | / /_    | |   | (_| || (_) || (__ |   <|  __/| |   
+ /_/    \_\|_| \___/            \___\_\|_|  |_||____|   |_|    \__,_| \___/  \___||_|\_\\___||_|   
+QueueMetrics24 via Docker - ALO Global
+
+### **Cuando requierespasar un archivo backup queuemetrics hacia el contenedor docker y este ultimo hacer la restauración .sql**
+
+#### 1. Copiar el backup al contenedorr QM1
+```bash
+root@queuemetrics:/home/administrador# docker cp  /home/administrador/05022025.sql QM1:/data
+Successfully copied 9.61GB to QM1:/data
+```
+
+#### 2. Restaurar el archivo backup en QM1
+```bash
+[root@qm1 /]# mysql -u root queuemetrics < /data/05022025.sql
+```
+
