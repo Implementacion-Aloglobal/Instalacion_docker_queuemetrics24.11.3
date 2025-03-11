@@ -1,0 +1,18 @@
+#este scriptt tte permite recolectar todos los agentes en tu queuemetrics versión legacy para llevarlos a la nueva versión 
+#extraer colas
+curl  --user robot:robot -i -H "Content-Type: application/json" -X GET http://200.1.1.215:8081/queuemetrics/queue/jsonEditorApi.do > queue.json
+
+#extraer agentes
+curl  --user robot:robot -i -H "Content-Type: application/json" -X GET http://200.1.1.215:8081/queuemetrics/agent/jsonEditorApi.do > agent.json
+
+#extraer tipificaciones
+curl  --user robot:robot -i -H "Content-Type: application/json" -X GET http://200.1.1.215:8081/queuemetrics/outcome/jsonEditorApi.do > outcome.json
+
+
+#luego sanear archivo json previamente extraido, se debe quitar el encabezado y todo debe quedar con el formato limpio
+[
+{},{},{}
+]
+
+#luego utilizar el script script_bath_createt.txt, para proceder a crear todas en la nueva versión
+
