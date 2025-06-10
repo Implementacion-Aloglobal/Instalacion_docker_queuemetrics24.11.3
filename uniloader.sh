@@ -1,9 +1,6 @@
-Instalacion uniload
-Descarga de repo
-```bash
+###Instalacion uniload
+##Descarga de repo
 wget -P /etc/yum.repos.d https://yum.loway.ch/loway.repo
-```
-Instalacion de uniloader
-```bash
+
+##Instalacion de uniloader
 yum install uniloader
-```
